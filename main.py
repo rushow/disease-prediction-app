@@ -20,13 +20,16 @@ heart_disease_model = pickle.load(open(f'{working_dir}/saved_models/heart_diseas
 
 parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
 
+breast_cancer_model = pickle.load(open(f'{working_dir}/saved_models/breast_cancer_model.sav', 'rb'))
+
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Disease Prediction System',
 
                            ['Diabetes Prediction',
                             'Heart Disease Prediction',
-                            'Parkinsons Prediction'],
+                            'Parkinsons Prediction',
+                            'Breast Cancer Prediction'],
                            menu_icon='hospital-fill',
                            icons=['activity', 'heart', 'person'],
                            default_index=0)
@@ -248,3 +251,46 @@ if selected == "Parkinsons Prediction":
             parkinsons_diagnosis = "The person does not have Parkinson's disease"
 
     st.success(parkinsons_diagnosis)
+
+
+# Breast Cancer Prediction Page
+if selected == "Breast Cancer Prediction":
+
+    # page title
+    st.title("Breast Cancer Prediction using ML")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        mean_radius = st.text_input('Mean Radius')
+
+    with col2:
+        mean_texture = st.text_input('Mean Texture')
+
+    with col3:
+        mean_perimeter = st.text_input('Mean Perimeter')
+
+    with col1:
+        mean_area = st.text_input('Mean Area')
+
+    with col2:
+        mean_smoothness = st.text_input('Mean Smoothness')
+
+    # code for Prediction
+    breast_cancer_diagnosis = ''
+
+    # creating a button for Prediction
+    if st.button("Breast Cancer Test Result"):
+
+        user_input = [mean_radius, mean_texture, mean_perimeter, mean_area, mean_smoothness]
+
+        user_input = [float(x) for x in user_input]
+
+        breast_cancer_prediction = breast_cancer_model.predict([user_input])
+
+        if breast_cancer_prediction[0] == 1:
+            breast_cancer_diagnosis = "The person has Breast Cancer"
+        else:
+            breast_cancer_diagnosis = "The person does not have Breast Cancer"
+
+    st.success(breast_cancer_diagnosis)
