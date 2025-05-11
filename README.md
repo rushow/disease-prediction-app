@@ -8,10 +8,21 @@ This repository contains a Streamlit-based web application for predicting the li
 - **Heart Disease Prediction**: Predicts the likelihood of heart disease based on user inputs such as age, cholesterol level, and resting blood pressure.
 - **Parkinson's Disease Prediction**: Predicts the likelihood of Parkinson's disease based on user inputs such as jitter, shimmer, and other vocal features.
 
+
+## Requirements
+The project requires the following Python libraries:
+
+- numpy
+- scikit-learn
+- streamlit
+- streamlit-option-menu
+
+Install them using the requirements.txt file.
+
 ## Install the required dependencies
-
+```
 pip install -r requirements.txt
-
+```
 ## Usage
 Run the Streamlit app:
 ```
@@ -37,16 +48,6 @@ Pre-trained models are stored in the saved_models directory:
 - parkinsons_model.sav
 
 These models are loaded in the Streamlit app for predictions.
-
-## Requirements
-The project requires the following Python libraries:
-
-- numpy
-- scikit-learn
-- streamlit
-- streamlit-option-menu
-
-Install them using the requirements.txt file.
 
 
 ## License
