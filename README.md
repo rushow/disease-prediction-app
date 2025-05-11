@@ -22,32 +22,32 @@ Open the URL provided by Streamlit in your browser (usually http://localhost:850
 Select the disease prediction system you want to use and input the required parameters.
 
 ## Datasets
-Diabetes Dataset: Contains features like glucose level, blood pressure, and BMI.
-Heart Disease Dataset: Contains features like age, cholesterol level, and resting blood pressure.
-Parkinson's Disease Dataset: Contains vocal features like jitter and shimmer.
+- Diabetes Dataset: Contains features like glucose level, blood pressure, and BMI.
+- Heart Disease Dataset: Contains features like age, cholesterol level, and resting blood pressure.
+- Parkinson's Disease Dataset: Contains vocal features like jitter and shimmer.
 
 ## Model Training
 The models are trained using the respective datasets in Jupyter notebooks located in the colab_files_to_train_models directory. Each notebook includes data preprocessing, model training, and evaluation.
 
-Pre-trained Models
+## Pre-trained Models
 Pre-trained models are stored in the saved_models directory:
 
-diabetes_model.sav
-heart_disease_model.sav
-parkinsons_model.sav
+- diabetes_model.sav
+- heart_disease_model.sav
+- parkinsons_model.sav
+
 These models are loaded in the Streamlit app for predictions.
 
 ## Requirements
 The project requires the following Python libraries:
 
-numpy
-scikit-learn
-streamlit
-streamlit-option-menu
+- numpy
+- scikit-learn
+- streamlit
+- streamlit-option-menu
+
 Install them using the requirements.txt file.
 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details. ```
+This project is licensed under the MIT License. 
