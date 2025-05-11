@@ -14,9 +14,9 @@ pip install -r requirements.txt
 
 ## Usage
 Run the Streamlit app:
-
+```
 streamlit run main.py
-
+```
 Open the URL provided by Streamlit in your browser (usually http://localhost:8501).
 
 Select the disease prediction system you want to use and input the required parameters.
